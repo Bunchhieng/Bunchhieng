@@ -1,4 +1,5 @@
 var path = require('path');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -31,5 +32,16 @@ module.exports = {
       test: /\.html$/,
       loader: "file?name=[name].[ext]",
     }]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: './public/css',
+      to: './css'
+    }, {
+      from: './public/img',
+      to: './img'
+    }, {
+      from: 'README.md'
+    }])
+  ]
 }
