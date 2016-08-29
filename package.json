@@ -1,0 +1,39 @@
+{
+  "name": "bunchhieng-site",
+  "version": "1.0.0",
+  "description": "My personal website using React..",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --content-base public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunchhieng/Bunchhieng.git"
+  },
+  "keywords": [
+    "Bunchhieng"
+  ],
+  "author": "Bunchhieng Soth <Bunchhieng@gmail.com> (http://www.hackbits.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bunchhieng/Bunchhieng/issues"
+  },
+  "homepage": "https://github.com/Bunchhieng/Bunchhieng#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "gh-pages": "^0.11.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "file-loader": "^0.9.0",
+    "img-loader": "^1.3.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0"
+  }
+}
