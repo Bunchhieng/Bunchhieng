@@ -21460,7 +21460,12 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_ProfilePic2.default, { src: "../../public/img/Bun.jpg" })
+	        _react2.default.createElement(_ProfilePic2.default, { src: "../../public/img/Bun.jpg" }),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          'Bunchhieng Soth'
+	        )
 	      );
 	    }
 	  }]);
@@ -21479,8 +21484,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -21506,20 +21509,31 @@
 	  function ProfilePic(props) {
 	    _classCallCheck(this, ProfilePic);
 
-	    return _possibleConstructorReturn(this, (ProfilePic.__proto__ || Object.getPrototypeOf(ProfilePic)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (ProfilePic.__proto__ || Object.getPrototypeOf(ProfilePic)).call(this, props));
+
+	    _this.state = {
+	      imgSrc: "./img/Bun.jpg"
+	    };
+	    return _this;
 	  }
 
 	  _createClass(ProfilePic, [{
 	    key: 'handleMouseOver',
 	    value: function handleMouseOver() {
-	      this.props.src = "../../public/img/Saitama.jpg";
+	      this.setState({ imgSrc: "./img/Saitama.jpg" });
+	    }
+	  }, {
+	    key: 'handleMouseOut',
+	    value: function handleMouseOut() {
+	      this.setState({ imgSrc: "./img/Bun.jpg" });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('img', _extends({}, this.props, { style: imgStyle,
+	      return _react2.default.createElement('img', { src: this.state.imgSrc, style: imgStyle,
 	        alt: 'Profile Picture',
-	        onMouseOver: this.handleMouseOver.bind(this) }));
+	        onMouseOver: this.handleMouseOver.bind(this),
+	        onMouseOut: this.handleMouseOut.bind(this) });
 	    }
 	  }]);
 
