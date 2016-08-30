@@ -18,6 +18,10 @@ body {
   text-align: center;
 }
 
+hr {
+  width: 50%;
+  border-top: 1px solid #ccc;
+}
 
 /* Horizontally line */
 
