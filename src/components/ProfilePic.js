@@ -15,11 +15,11 @@ export default class ProfilePic extends React.Component {
   }
 
   handleMouseOver() {
-    this.setState({imgSrc: "./img/Saitama.jpg"});
+    this.setState({imgSrc: "http://images.designntrend.com/data/images/full/72810/one-punch-man.jpg?w=780"});
   }
 
   handleMouseOut() {
-    this.setState({imgSrc: "./img/Bun.jpg"});
+    this.setState({imgSrc: "http://bunchhieng.github.io/webpage/Images/BUN.jpg"});
   }
 
   render() {
