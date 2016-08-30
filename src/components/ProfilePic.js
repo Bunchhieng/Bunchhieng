@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const imgStyle = {
+  width: 170,
+  height: 170
+}
+
 export default class ProfilePic extends React.Component {
   constructor(props) {
     super(props);
@@ -16,18 +21,13 @@ export default class ProfilePic extends React.Component {
   handleMouseOut() {
     this.setState({imgSrc: "./img/Bun.jpg"});
   }
-  
+
   render() {
     return (
-      <img src={this.state.imgSrc} style={imgStyle}
+      <img id="profilePic" src={this.state.imgSrc} style={imgStyle}
       alt="Profile Picture"
       onMouseOver={this.handleMouseOver.bind(this)}
       onMouseOut={this.handleMouseOut.bind(this)} />
     )
   }
 }
-
-let imgStyle = {
-  width: 200,
-  height: 200
-};

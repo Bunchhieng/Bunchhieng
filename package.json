@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --content-base public",
-    "deploy": "node gh-page.js"
+    "deploy": "webpack && node gh-page.js"
   },
   "repository": {
     "type": "git",

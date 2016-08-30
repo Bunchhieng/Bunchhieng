@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Projects extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
-      <div>Projects page</div>
+      <div>Home page</div>
     )
   }
 }
