@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -41,7 +42,14 @@ module.exports = {
       from: './public/img',
       to: './img'
     }, {
+      from: './public/404.html'
+    }, {
       from: 'README.md'
-    }])
+    }]),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
 }
