@@ -27610,7 +27610,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'list' },
 	        _react2.default.createElement(
 	          'h4',
 	          null,
@@ -27619,7 +27619,7 @@
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'Welcome to site...'
+	          'SPA on github page :P...'
 	        )
 	      );
 	    }
