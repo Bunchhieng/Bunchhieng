@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -25,16 +26,20 @@ module.exports = {
       }
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
-      loaders: [
-        'url?limit=8192',
-        'img'
-      ]
+      loaders: ['url?limit=8192', 'img']
     }, {
       test: /\.html$/,
       loader: "file?name=[name].[ext]",
+    }, {
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
     }]
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./public/css")]
+  },
   plugins: [
+    new ExtractTextPlugin("app.css"),
     new CopyWebpackPlugin([{
       from: './public/css',
       to: './css'
@@ -46,10 +51,6 @@ module.exports = {
     }, {
       from: 'README.md'
     }]),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
+    new webpack.NoErrorsPlugin()
   ]
 }

@@ -1,3 +1,6 @@
+# remove dist folder from master
+dist/
+
 # Logs
 logs
 *.log
