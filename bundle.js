@@ -27133,6 +27133,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var Active = { background: '#4bba67', color: '#fff' };
+
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -27157,6 +27159,37 @@
 	            null,
 	            'Bunchhieng Soth'
 	          ),
+	          _react2.default.createElement(
+	            'ul',
+	            { id: 'socialIcons' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'https://github.com/Bunchhieng', target: '_blank' },
+	                _react2.default.createElement('i', { className: 'fa fa-github-square', 'aria-hidden': 'true' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'https://www.linkedin.com/in/bunchhieng', target: '_blank' },
+	                _react2.default.createElement('i', { className: 'fa fa-linkedin-square', 'aria-hidden': 'true' })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'http://stackoverflow.com/users/2484238/bun', target: '_blank' },
+	                _react2.default.createElement('i', { className: 'fa fa-stack-overflow', 'aria-hidden': 'true' })
+	              )
+	            )
+	          ),
 	          _react2.default.createElement(_Clock2.default, null),
 	          _react2.default.createElement('hr', null),
 	          _react2.default.createElement(
@@ -27171,7 +27204,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'a',
-	            { href: 'https://drive.google.com/open?id=1V4Bk5GZO2_waXtd2OTtcJfa7OmNVWRV4XLgepeM7dps' },
+	            { href: 'https://drive.google.com/open?id=1V4Bk5GZO2_waXtd2OTtcJfa7OmNVWRV4XLgepeM7dps', target: '_blank' },
 	            'Resume'
 	          )
 	        ),
@@ -27183,8 +27216,14 @@
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: '/', onlyActiveOnIndex: true },
-	              'Home'
+	              { to: '/', activeStyle: Active },
+	              _react2.default.createElement('i', { className: 'glyphicon glyphicon-home' }),
+	              ' ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Home'
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27192,8 +27231,14 @@
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: '/courses' },
-	              'Courses'
+	              { to: '/courses', activeStyle: Active },
+	              _react2.default.createElement('i', { className: 'glyphicon glyphicon-book' }),
+	              ' ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Courses'
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27201,12 +27246,17 @@
 	            null,
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: '/projects' },
-	              'Projects'
+	              { to: '/projects', activeStyle: Active },
+	              _react2.default.createElement('i', { className: 'glyphicon glyphicon-console' }),
+	              ' ',
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Project'
+	              )
 	            )
 	          )
 	        ),
-	        _react2.default.createElement(_Footer2.default, null),
 	        this.props.children
 	      );
 	    }
@@ -27261,9 +27311,17 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          'footer',
 	          { className: 'footer' },
-	          'Made with ❤ using React'
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'text-muted' },
+	              'Made with ❤ using React'
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -27466,34 +27524,39 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'list' },
 	        _react2.default.createElement(
-	          'p',
+	          'h4',
 	          null,
 	          'List of courses taken:'
 	        ),
 	        _react2.default.createElement(
 	          'ul',
-	          null,
+	          { className: 'list-group' },
 	          _react2.default.createElement(
 	            'li',
-	            null,
+	            { className: 'list-group-item' },
 	            'Algorithm'
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
+	            { className: 'list-group-item' },
 	            'Machine Learning'
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
+	            { className: 'list-group-item' },
 	            'Graphical User Interface I'
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
+	            { className: 'list-group-item' },
 	            'Graphical User Interface II'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'list-group-item' },
+	            'Data mining'
 	          )
 	        )
 	      );
@@ -27548,7 +27611,16 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Home page'
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          'Home page'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Welcome to site...'
+	        )
 	      );
 	    }
 	  }]);
@@ -27640,38 +27712,50 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'list' },
 	        _react2.default.createElement(
-	          'p',
+	          'h4',
 	          null,
 	          'List of projects:'
 	        ),
 	        _react2.default.createElement(
 	          'ul',
-	          null,
+	          { className: 'list-group' },
 	          _react2.default.createElement(
 	            'li',
-	            null,
+	            { className: 'list-group-item' },
 	            _react2.default.createElement(
 	              'a',
-	              { href: '#' },
+	              { href: 'https://github.com/Bunchhieng/hnreader', target: '_blank' },
 	              'Hacker News Reader'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
-	            'Machine Learning'
+	            { className: 'list-group-item' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/Bunchhieng/Hawkathon', target: '_blank' },
+	              'Recipe recommender and sentimental analysis using HPE API'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
-	            'Graphical User Interface I'
+	            { className: 'list-group-item' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/Hive-Labs/Wingman', target: '_blank' },
+	              'Wingman'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'li',
-	            null,
-	            'Graphical User Interface II'
+	            { className: 'list-group-item' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/Hive-Labs/IDHack2016', target: '_blank' },
+	              'IDHack 2016'
+	            )
 	          )
 	        )
 	      );
