@@ -20,3 +20,4 @@ const routes = (
 ReactDOM.render((
   <Router history={browserHistory} routes={routes}/>
 ), document.getElementById('app'));
+HelloWorld
