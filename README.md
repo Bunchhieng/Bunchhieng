@@ -1,5 +1,5 @@
 # 💫 About Me:
-🌱 I’m currently learning Rust, TypeScript and Blockchain.<br>⚡ Fun fact: I love playing sports, including Soccer and Volleyball.
+🌱 Dev @ Terran One working on CosmWasm. Technology: Typescript, React, Rust and Blockchain.<br>⚡ Fun fact: I love playing sports, including Soccer and Volleyball.
 
 
 # 💻 Tech Stack:
