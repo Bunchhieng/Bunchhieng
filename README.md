@@ -1,5 +1,5 @@
 # 💫 About Me:
-🌱 Dev @ Terran One working on CosmWasm. Technology: Typescript, React, Rust and Blockchain.<br>⚡ Fun fact: I love playing sports, including Soccer and Volleyball. Survivor of 2 crypto bear cycles. 🧸
+🌱 prev @ Terran One working on CosmWasm. Technology: Typescript, React, Rust, and Blockchain.
 
 
 # 💻 Tech Stack:
